@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/request"
+            android:icon="@drawable/brown_snow"
+            android:title="REQUEST" />
+        <item
+            android:id="@+id/job_status"
+            android:icon="@drawable/file"
+            android:title="JOB STATUS" />
+        <item
+            android:id="@+id/aval_jobs"
+            android:icon="@drawable/brown_snow_remove"
+            android:title="AVALABLE JOBS" />
+        <item
+            android:id="@+id/configuration"
+            android:icon="@drawable/settings"
+            android:title="SETTINGS" />
+    </group>
+
+
+
+</menu>

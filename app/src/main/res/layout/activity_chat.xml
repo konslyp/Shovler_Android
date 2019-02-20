@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutBar">
+
+        <include
+            android:id="@+id/top_layout"
+            layout="@layout/title_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrChat"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_below="@+id/layoutBar"
+        android:background="#F2F2F2"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layoutChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#92C1CF"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/editChatMessage"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:inputType="text" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imgChatSend"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_send" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

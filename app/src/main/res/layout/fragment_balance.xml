@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/title_toolbar_layout"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/approved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="APPROVED"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_horizontal"
+            android:text="$18 USD"
+            android:textSize="40dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/pending_bg"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="96dp"
+            android:paddingRight="96dp"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id="@+id/pending_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDING"
+                android:textColor="@color/brown" />
+
+            <TextView
+                android:id="@+id/pending_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="$100 USD"
+                android:textColor="@color/brown"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Please note that funds related to jobs under review will not appear in your balance until resolved"
+            android:gravity="center"
+            android:layout_marginTop="32dp"/>
+        <Button
+            android:id="@+id/button_withdraw"
+            android:layout_below="@+id/divider_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:background="@color/app_color"
+            android:text="WITHDRAW MONEY"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

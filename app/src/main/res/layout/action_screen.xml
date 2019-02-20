@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:gravity="center"
+    >
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/check_finish_job"/>
+            <TextView
+                android:layout_marginTop="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="You are about to mark this project as finished.\n\nPlease note that if there is a dispute with the requester we will compare photos and you could potentially not get paid for your work.\n\nPlease make sure that your work is done as best as possible and that the photo you upload is clear to avoid any issues."
+                android:paddingLeft="36dp"
+                android:paddingRight="36dp"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/ok_tv"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:background="@drawable/button_border"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+</LinearLayout>

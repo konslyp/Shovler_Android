@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:clickable="false"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        >
+
+        <ImageView
+            android:id="@+id/number_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/number_image_two" />
+
+        <ScrollView
+            android:layout_below="@+id/number_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="32dp"
+            android:scrollbars="none"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/request_bg"
+                >
+
+
+                <RelativeLayout
+                    android:id="@+id/driveway_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/open_driveway_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/open_driveway"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="DRIVEWAY"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/driveway_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="4dp"
+                            android:background="@drawable/ic_action_down_arrow" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/close_driveway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_action_close" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/divider_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/driveway_layout"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:id="@+id/driveway_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_1"
+                    android:padding="4dp"
+                    android:background="@drawable/layout_border"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="SELECT THE SIZE OF WORK" />
+
+                    <LinearLayout
+                        android:id="@+id/select_size_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text1"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <ImageView
+                                    android:id="@+id/one_car_driveway"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/one_car_driveway" />
+
+                                <ImageView
+                                    android:id="@+id/one_car_right"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="16dp"
+                                    android:visibility="visible"
+                                    android:src="@drawable/right_outer_circle" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/car_title1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="1 CAR"
+                                    android:textColor="@color/brown" />
+
+                                <TextView
+                                    android:id="@+id/car_size1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="20 X 20"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <ImageView
+                                    android:id="@+id/two_car_driveway"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/two_car_driveway" />
+
+                                <ImageView
+                                    android:id="@+id/two_car_right"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="16dp"
+                                    android:visibility="invisible"
+                                    android:src="@drawable/right_outer_circle" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/car_title2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="2 CAR"
+                                    android:textColor="@color/brown" />
+
+                                <TextView
+                                    android:id="@+id/car_size2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="40 X 20"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <ImageView
+                                    android:id="@+id/four_car_driveway"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/four_car_driveway" />
+
+                                <ImageView
+                                    android:id="@+id/four_car_right"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="16dp"
+                                    android:visibility="invisible"
+                                    android:src="@drawable/right_outer_circle" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/car_title3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="4 CAR"
+                                    android:textColor="@color/brown" />
+
+                                <TextView
+                                    android:id="@+id/car_size3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="50 X 30"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_size_layout"
+                        android:layout_marginTop="16dp"
+                        android:text="UPLOAD PICTURES (OPTIONAL)" />
+
+                    <LinearLayout
+                        android:id="@+id/upload_image_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text2"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/upload_image1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rectangle" />
+
+                        <ImageView
+                            android:id="@+id/upload_image2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rectangle" />
+
+                        <ImageView
+                            android:id="@+id/upload_image3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rectangle" />
+
+                        <ImageView
+                            android:id="@+id/upload_image4"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rectangle" />
+                    </LinearLayout>
+
+                    <!--  <TextView
+                          android:id="@+id/divider_9"
+                          android:layout_width="match_parent"
+                          android:layout_height="1dp"
+                          android:layout_below="@+id/upload_image_layout"
+                          android:layout_marginTop="16dp"
+                          android:layout_marginBottom="8dp"
+                          android:background="@color/colorAccent" />-->
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/car_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/driveway_view"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:id="@+id/open_car_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/open_car"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:text="CAR"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/car_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="4dp"
+                            android:background="@drawable/ic_action_down_arrow" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/close_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_action_close" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/divider_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/car_layout"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:id="@+id/car_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_2"
+                    android:layout_marginTop="8dp"
+                    android:padding="4dp"
+                    android:background="@drawable/layout_border"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="MAKE AND MODEL" />
+
+                        <EditText
+                            android:id="@+id/model_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:hint="Enter Model"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:textColor="@color/black" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="SELECT THE CLOSEST COLOR OF YOUR CAR" />
+                        <com.app.shovelerapp.utils.LineColorPicker
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/picker"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="8dp"
+                            app:colors="@array/rainbow"
+                            app:orientation="horizontal"
+                            app:selectedColorIndex="3" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/plate_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="LICENSE PLATE NUMBER" />
+
+                        <EditText
+                            android:id="@+id/license_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:hint="Enter license plate number"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textColor="@color/black" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/upload_pictures_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/divider_3"
+                            android:layout_marginTop="16dp"
+                            android:text="UPLOAD PICTURES (OPTIONAL)" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text4"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/upload_car_image1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/rectangle" />
+
+                            <ImageView
+                                android:id="@+id/upload_car_image2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/rectangle" />
+
+                            <ImageView
+                                android:id="@+id/upload_car_image3"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/rectangle" />
+
+                            <ImageView
+                                android:id="@+id/upload_car_image4"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/rectangle" />
+                        </LinearLayout>
+
+                        <!--<TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/upload_image_layout"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@color/colorAccent" />-->
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <!----><!----><!----><!----><!---->
+
+                <RelativeLayout
+                    android:id="@+id/sidewalk_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/car_view">
+
+                    <LinearLayout
+                        android:id="@+id/open_sidewalk_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/open_sidewalk"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:text="SIDEWALK"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/sidewalk_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="4dp"
+                            android:background="@drawable/ic_action_down_arrow" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/close_sidewalk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_action_close" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/divider_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/sidewalk_layout"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:id="@+id/sidewalk_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_3"
+                    android:padding="4dp"
+                    android:background="@drawable/layout_border"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="SELECT THE SIZE OF WORK" />
+
+                    <LinearLayout
+                        android:id="@+id/select_size_layout_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text5"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <ImageView
+                                    android:id="@+id/small_sidewalk"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/small_sidewalks" />
+
+                                <ImageView
+                                    android:id="@+id/small_sidewalk_right"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="16dp"
+                                    android:visibility="visible"
+                                    android:src="@drawable/right_outer_circle" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/sidewalk_title1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="SMALL SIDEWALKS"
+                                    android:textColor="@color/brown"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/sidewalk_size1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="4 X 50"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <ImageView
+                                    android:id="@+id/large_sidewalks"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/large_sidewalks" />
+
+                                <ImageView
+                                    android:id="@+id/large_sidewalks_right"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="16dp"
+                                    android:visibility="invisible"
+                                    android:src="@drawable/right_outer_circle" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/sidewalk_title2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="LARGE SIDEWALKS"
+                                    android:textColor="@color/brown"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/sidewalk_size2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="5 X 85"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp">
+
+                                <ImageView
+                                    android:id="@+id/city_sidewalks"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/city_sidewalks" />
+
+                                <ImageView
+                                    android:id="@+id/city_sidewalks_right"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="16dp"
+                                    android:visibility="invisible"
+                                    android:src="@drawable/right_outer_circle" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/sidewalk_title3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="CITY SIDEWALKS"
+                                    android:textColor="@color/brown"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/sidewalk_size3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="10 X 100"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_size_layout_2"
+                        android:layout_marginTop="16dp"
+                        android:text="UPLOAD PICTURES (OPTIONAL)" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text6"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/sidewalk_image1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rectangle" />
+
+                        <ImageView
+                            android:id="@+id/sidewalk_image2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rectangle" />
+
+                        <ImageView
+                            android:id="@+id/sidewalk_image3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rectangle" />
+
+                        <ImageView
+                            android:id="@+id/sidewalk_image4"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/rectangle" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/price_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sidewalk_view"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/price_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="PRICE"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/brown" />
+
+                    <TextView
+                        android:id="@+id/price_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="$70"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorAccent" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/divider_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/price_layout"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:id="@+id/special_imstruction_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_4"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/special_inst_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="SPECIAL INSTRUCTIONS\n(OPTIONAL)"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/brown" />
+
+                    <ImageView
+                        android:id="@+id/add_instruction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="8dp"
+                        android:src="@drawable/add" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:layout_below="@+id/special_imstruction_layout"
+                    android:id="@+id/extra_instruction_edit"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="3"
+                    android:background="@drawable/layout_border"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/divider_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/extra_instruction_edit"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <Button
+                    android:layout_below="@+id/divider_5"
+                    android:id="@+id/second_cont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@color/app_color"
+                    android:drawableRight="@drawable/ic_action_continue"
+                    android:text="CONTINUE"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

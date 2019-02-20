@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/number_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/number_image_3" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/number_image"
+            android:layout_marginBottom="32dp"
+            android:scrollbars="none">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/request_bg">
+
+                <LinearLayout
+                    android:id="@+id/info_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/request"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="YOUR REQUEST" />
+
+                        <TextView
+                            android:id="@+id/request_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="DRIVEWAY, CAR,\nSIDEWALK" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/request_layout"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/location_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="LOCATION" />
+
+                        <TextView
+                            android:id="@+id/location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="28th ST \nBergenline Ave,\n10025" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/request_layout"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/price_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="PRICE" />
+
+                        <TextView
+                            android:id="@+id/price_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="$70" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driveway_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info_layout"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/open_driveway"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:text="DRIVEWAY"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/divider_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/driveway_layout"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:id="@+id/driveway_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_1"
+                    android:background="@drawable/layout_border"
+                    android:padding="4dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/select_size_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text1"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/one_car_driveway"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/one_car_driveway" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/car_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="1 CAR"
+                                    android:textColor="@color/brown" />
+
+                                <TextView
+                                    android:id="@+id/car_size"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="20 X 20"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/driveway_pictures_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_size_layout"
+                        android:layout_marginTop="16dp"
+                        android:text="DRIVEWAY - PICTURES" />
+
+                    <LinearLayout
+                        android:id="@+id/upload_image_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/driveway_pictures_title"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/driveway_pic1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/no_image_1" />
+
+                        <ImageView
+                            android:id="@+id/driveway_pic2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/no_image_1" />
+
+                        <ImageView
+                            android:id="@+id/driveway_pic3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/no_image_1" />
+
+                        <ImageView
+                            android:id="@+id/driveway_pic4"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/no_image_1" />
+                    </LinearLayout>
+
+                    <!--  <TextView
+                          android:id="@+id/divider_9"
+                          android:layout_width="match_parent"
+                          android:layout_height="1dp"
+                          android:layout_below="@+id/upload_image_layout"
+                          android:layout_marginTop="16dp"
+                          android:layout_marginBottom="8dp"
+                          android:background="@color/colorAccent" />-->
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/car_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/driveway_view"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/open_car"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:text="CAR"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/divider_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/car_layout"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:id="@+id/car_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_2"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/layout_border"
+                    android:padding="4dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="FORD FIESTA 2009" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
+
+                            <TextView
+                                android:id="@+id/plate_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:padding="4dp"
+                                android:text="6GDG486"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/car_color_tv"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="16dp"
+                                android:background="@drawable/circle_layout"
+                                android:gravity="center"
+                                android:text="C"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/car_pictures"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/divider_3"
+                            android:layout_marginTop="16dp"
+                            android:text="CAR - PICTURES" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text4"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/car_pic1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/no_image_1" />
+
+                            <ImageView
+                                android:id="@+id/car_pic2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/no_image_1" />
+
+                            <ImageView
+                                android:id="@+id/car_pic3"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/no_image_1" />
+
+                            <ImageView
+                                android:id="@+id/car_pic4"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/no_image_1" />
+                        </LinearLayout>
+
+                        <!--<TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/upload_image_layout"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@color/colorAccent" />-->
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <!----><!----><!----><!----><!---->
+
+                <LinearLayout
+                    android:id="@+id/sidewalk_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/car_view"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/open_sidewalk"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:text="SIDEWALK"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/divider_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/sidewalk_layout"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:id="@+id/sidewalk_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_3"
+                    android:background="@drawable/layout_border"
+                    android:padding="4dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/select_size_layout_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text5"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/small_sidewalk"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/small_sidewalks" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="16dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/sidewalk_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="SMALL SIDEWALKS"
+                                    android:textColor="@color/brown"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/sidewalk_size"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:text="4 X 50"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_size_layout_2"
+                        android:layout_marginTop="16dp"
+                        android:text="SIDEWALK - PICTURES" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text6"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/sidewalk_pic1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/no_image_1" />
+
+                        <ImageView
+                            android:id="@+id/sidewalk_pic2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/no_image_1" />
+
+                        <ImageView
+                            android:id="@+id/sidewalk_pic3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/no_image_1" />
+
+                        <ImageView
+                            android:id="@+id/sidewalk_pic4"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/no_image_1" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/divider_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/sidewalk_view"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:id="@+id/special_imstruction_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_4"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/spe_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="SPECIAL INSTRUCTIONS"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                         />
+
+                    <TextView
+                        android:id="@+id/special_instruction_val"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@+id/spe_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when "/>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/extra_instruction_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/special_imstruction_layout"
+                    android:layout_marginTop="8dp"
+                    android:imeOptions="actionDone"
+                    android:maxLines="3"
+                    android:inputType="text"
+                    android:background="@drawable/layout_border"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/divider_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/extra_instruction_edit"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorAccent" />
+
+                <Button
+                    android:id="@+id/third_cont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/divider_5"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@color/app_color"
+                    android:drawableRight="@drawable/ic_action_continue"
+                    android:text="POST JOB"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

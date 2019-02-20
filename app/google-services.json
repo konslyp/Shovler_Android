@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "328297538366",
+    "firebase_url": "https://shovler-6eed8.firebaseio.com",
+    "project_id": "shovler-6eed8",
+    "storage_bucket": "shovler-6eed8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328297538366:android:83bb97751b9c1557",
+        "android_client_info": {
+          "package_name": "com.app.shovelerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328297538366-lug1hmga488am66p9unfn9c7c2onabtb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr7XmJ1XzS6_aGBa5gvtzyskHZ4bLOhpY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

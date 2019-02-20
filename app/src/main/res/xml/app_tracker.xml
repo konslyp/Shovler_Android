@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- End current session if app sleeps for a period of time -->
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!--  The property id associated with this analytics tracker -->
+    <string name="ga_trackingId">UA-86348614-1</string>
+
+    <string name="ga_sampleFrequency">100.0</string>
+
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+    <screenName name="com.app.shovelerapp.activity.WelcomeShovelerActivity">HomeScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.FirstStepActivity">RequesterScreen-1</screenName>
+    <screenName name="com.app.shovelerapp.activity.SecondStepActivity">RequesterScreen-2</screenName>
+    <screenName name="com.app.shovelerapp.activity.ThirdStepActivity">RequesterScreen-3</screenName>
+    <screenName name="com.app.shovelerapp.activity.RequestorStripeActivity">PaymentScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.PostJobActivity">PaymentSuccess</screenName>
+    <screenName name="com.app.shovelerapp.activity.JobStatusActivity">JobBoard</screenName>
+    <screenName name="com.app.shovelerapp.activity.ApproveJobActivity">ApproveJob</screenName>
+    <screenName name="com.app.shovelerapp.activity.AvailableJobActivity">AvailableJobsScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.AvailableJobDetailsActivity">JobDetailsScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.AcceptedJobDetailsActivity">AcceptedJobScreen</screenName>
+    <!--<screenName name="com.app.shovelerapp.activity">SeeRouteScreen</screenName>-->
+    <screenName name="com.app.shovelerapp.activity.UploadPhotoNotification">JobDoneScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.JobCancelActivity">JobCancelledScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.SettingActivity">SettingsScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.Confi1MyInfoActivity">MyInfo&amp;PaymentScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.Confi3AboutActivity">AboutScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.PrivacyActivity">PrivacyPolicy</screenName>
+    <screenName name="com.app.shovelerapp.activity.TermsAndCondition">Terms&amp;Conditions</screenName>
+    <screenName name="com.app.shovelerapp.activity.NewFAQActivity">FAQScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.Confi4FeedbackActivity">FeedbackScreen</screenName>
+    <screenName name="com.app.shovelerapp.activity.SendPromoCodeActivity">PromocodeScreen</screenName>
+
+
+    <!--
+      See Project Structure -> Analytics -> Google Analytics -> Learn More
+      to learn more about configuring this file.
+    -->
+</resources>

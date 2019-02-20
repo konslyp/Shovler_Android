@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="58dp"
+        android:background="@drawable/action_bar_bg"
+        >
+
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:visibility="visible"
+            android:src="@drawable/logo"/>
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:visibility="gone"
+            android:src="@drawable/request_shovler1" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:text="CONFIGURATION"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/drawer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:padding="12dp"
+            android:visibility="visible"
+            android:src="@drawable/drawer_img"/>
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>

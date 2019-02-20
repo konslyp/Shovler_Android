@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutBar">
+
+        <include
+            android:id="@+id/top_layout"
+            layout="@layout/title_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/map_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="230dp"
+        android:layout_alignParentLeft="true"
+        android:visibility="visible"
+        android:layout_below="@+id/layoutBar">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"></fragment>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/map_layout"
+        android:layout_marginBottom="60dp"
+        android:paddingTop="15dp">
+
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/request"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="REQUEST TYPE"
+                    android:textColor="@color/brown" />
+
+                <TextView
+                    android:id="@+id/request_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:text="DRIVEWAY, CAR,\nSIDEWALK" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/request_layout"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorGray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/location_title"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="LOCATION"
+                    android:textColor="@color/brown" />
+
+                <TextView
+                    android:id="@+id/location_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/location_title"
+                    android:gravity="right"
+                    android:lines="2"
+                    android:textColor="@color/black"
+                    android:text="28th ST Bergenline Ave,\n10025" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/request_layout"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorGray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/show_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="Click to open in navigation app"
+                    android:textColor="@color/app_color" />
+
+                <TextView
+                    android:id="@+id/divider_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/colorGray" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/price_title"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="PRICE"
+                    android:textColor="@color/brown" />
+
+                <TextView
+                    android:id="@+id/price_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"
+                    android:text="$70" />
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/car_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:id="@+id/divider_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorGray" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="JOB DETAILS"
+                    android:textColor="@color/brown"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:id="@+id/car_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_car"
+                    android:layout_marginTop="8dp"
+                   >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/car_upload_image_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fixed_price_devider"
+                            android:layout_marginTop="8dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/pic_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="JOB PICTURE"
+                                android:textColor="@color/brown" />
+
+
+                            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/car_iv_panorama"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:layout_below="@+id/pic_title"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="8dp"
+                                class="com.google.android.gms.maps.SupportStreetViewPanoramaFragment" />
+                            <TextView
+                                android:id="@+id/mask_0"
+                                android:layout_below="@+id/pic_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff" />
+                            <com.app.shovelerapp.utils.ScaledImageView
+                                android:id="@+id/car_iv"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:layout_below="@+id/pic_title"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="8dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1.0dp"
+                                android:layout_below="@+id/car_iv"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/colorGray" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:id="@+id/model_title"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="MODEL"
+                            android:textColor="@color/brown" />
+
+                        <TextView
+                            android:id="@+id/model"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/black"
+                            android:gravity="right"
+                            android:layout_toRightOf="@+id/model_title"
+                            android:text="FOED FISTA 2009" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorGray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:id="@+id/color_title"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="CAR COLOR"
+                            android:textColor="@color/brown" />
+
+                        <ImageView
+                            android:id="@+id/color_val"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="8dp"
+                            android:background="@color/red"
+                            android:padding="8dp"
+                            android:src="@drawable/car"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorGray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:id="@+id/plate_state"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="LICENSE PLATE\nNUMBER &amp; STATE"
+                            android:textColor="@color/brown" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/plate_val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/app_color"
+                                android:padding="8dp"
+                                android:text="6GDGG86"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/state_val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:background="@color/app_color"
+                                android:padding="8dp"
+                                android:text="STATE"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                        <!--<TextView
+                            android:id="@+id/color_val"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="8dp"
+                            android:background="@color/red"
+                            android:padding="8dp"
+                            android:textColor="@color/white"
+                            android:text="C" />-->
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorGray" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/car_layout"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingTop="16dp">
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/divider_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/home"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorGray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="JOB DETAILS"
+                    android:textColor="@color/brown"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/home_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_1"
+                    android:layout_marginTop="4dp"
+                    android:padding="4dp"
+                    android:visibility="visible">
+
+
+                    <RelativeLayout
+                        android:id="@+id/home_upload_image_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/pic_title1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="JOB PICTURE"
+                            android:textColor="@color/brown" />
+
+
+
+                        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/home_iv_panorama"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_below="@+id/pic_title1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            class="com.google.android.gms.maps.SupportStreetViewPanoramaFragment" />
+                        <TextView
+                            android:id="@+id/mask_1"
+                            android:layout_below="@+id/pic_title1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff" />
+                        <com.app.shovelerapp.utils.ScaledImageView
+                            android:id="@+id/home_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_below="@+id/pic_title1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dp"
+                            android:layout_below="@+id/home_iv"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorGray" />
+                    </RelativeLayout>
+
+                    <!--  <TextView
+                          android:id="@+id/divider_9"
+                          android:layout_width="match_parent"
+                          android:layout_height="1dp"
+                          android:layout_below="@+id/upload_image_layout"
+                          android:layout_marginTop="16dp"
+                          android:layout_marginBottom="8dp"
+                          android:background="@color/black" />-->
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/business_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_layout"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/request_layout"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorGray" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/size_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="SIZE"
+                        android:textColor="@color/brown" />
+
+                    <TextView
+                        android:id="@+id/size_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/black"
+                        android:text="70 ft²" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/size_of_work_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/size_of_work"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorGray" />
+
+
+                <RelativeLayout
+                    android:id="@+id/business_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_3"
+                    android:padding="4dp"
+                    android:visibility="visible">
+
+
+                    <RelativeLayout
+                        android:id="@+id/business_upload_image_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/pic_title2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="JOB PICTURE"
+                            android:textColor="@color/brown" />
+
+
+                        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/business_iv_panorama"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_below="@+id/pic_title2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            class="com.google.android.gms.maps.SupportStreetViewPanoramaFragment" />
+                        <TextView
+                            android:id="@+id/mask_2"
+                            android:layout_below="@+id/pic_title2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff" />
+                        <com.app.shovelerapp.utils.ScaledImageView
+
+                            android:id="@+id/business_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_below="@+id/pic_title2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dp"
+                            android:layout_below="@+id/business_iv"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorGray" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/special_imstruction_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider_4"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/spe_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="SPECIAL INSTRUCTIONS"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/brown" />
+
+                <TextView
+                    android:id="@+id/special_instruction_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spe_title"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black"
+                    android:text="No instruction entered" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/expect_arrive_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/special_imstruction_layout"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/expTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Expected Time of Arrival of Shoveler"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/brown" />
+
+                <TextView
+                    android:id="@+id/txtExpectTimeArrive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/expTime"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black"
+                     />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutChatShovler"
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="260dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/drawable_chat_shovler"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView6"
+            android:src="@drawable/chatbubble" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="CONTACT REQUESTER"
+            android:id="@+id/textView6"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgJobChat"
+        android:src="@drawable/ic_chat"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="false"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/divider_5"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="CANCEL JOB"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/finish_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="FINISH WORK"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>

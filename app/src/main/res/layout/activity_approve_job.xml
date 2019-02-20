@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.shovelerapp.activity.ApproveJobActivity">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/title_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/approved_job"
+        android:layout_below="@+id/top_layout">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/action_bar_bg"
+                    android:paddingTop="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:text="This job has been marked as\nfinished by the shoveler"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="46dp"
+                    android:background="@drawable/circle_layout"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_placeholder_approve_job" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="96dp"
+                    android:src="@drawable/right_outer_circle"
+                    app:layout_anchor="@id/imageView2"
+                    app:layout_anchorGravity="left|start" />
+
+                <TextView
+                    android:id="@+id/price_job"
+                    style="@style/RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageView4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="90dp"
+                    android:layout_marginRight="110dp"
+                    android:layout_marginTop="96dp"
+                    android:background="@color/dark_blue"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="$ 70"
+                    android:textColor="@color/white"
+                    app:layout_anchor="@id/imageView2"
+                    app:layout_anchorGravity="right|end" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/main_layout"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:id="@+id/after_work_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SEE THE AFTER WORK PICTURES"
+                        android:textColor="@color/brown" />
+
+                    <LinearLayout
+                        android:id="@+id/pic_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/iv2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/iv3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SHOVELER COMMENTS"
+                        android:textColor="@color/brown" />
+
+                    <TextView
+                        android:id="@+id/comments_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="No instructions entered"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="REVIEW JOB"
+                        android:textColor="@color/brown" />
+
+                    <RatingBar
+                        android:id="@+id/ratting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:theme="@style/RatingBar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WANT TO TIP REQUESTER ?"
+                        android:textColor="@color/brown" />
+
+                    <EditText
+                        android:id="@+id/tip_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/layout_border"
+                        android:drawableLeft="@drawable/dol"
+                        android:enabled="false"
+                        android:hint="Enter tip amount"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/approved_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@color/app_color"
+        android:text="APPROVE JOB"
+        android:textColor="@color/white" />
+</RelativeLayout>

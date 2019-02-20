@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/cancel_job_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/download">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/cancel_job"/>
+            <TextView
+                android:layout_marginTop="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="This job has been\ncancelled"
+                android:paddingLeft="36dp"
+                android:paddingRight="36dp"
+                android:textColor="@color/white"
+                android:textSize="28dp" />
+            <TextView
+                android:id="@+id/ok_tv"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:background="@drawable/undo_button_order"
+                android:textColor="@color/undo_border_color"/>
+            <TextView
+                android:id="@+id/undo_tv"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="UNDO THIS ACTION"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:background="@drawable/undo_button_order"
+                android:textColor="@color/undo_border_color"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

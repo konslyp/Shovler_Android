@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.app.shovelerapp.activity.ThirdStepActivity">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/title_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/number_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/number_image_3" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layout_jobtrack"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+            <fragment
+                android:id="@+id/mapTrack"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:layout="@layout/fragment_request"></fragment>
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/post_button"
+            android:layout_below="@+id/number_image"
+            android:paddingTop="15dp"
+            android:scrollbars="none"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/request_bg">
+
+                <LinearLayout
+                    android:id="@+id/info_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/request"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="REQUEST TYPE"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/brown" />
+
+                        <TextView
+                            android:id="@+id/request_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"
+                            android:textAllCaps="true"
+                            android:text="DRIVEWAY, CAR,\nSIDEWALK" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/request_layout"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorGray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/location_title"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="LOCATION"
+                              android:layout_centerVertical="true"
+                            android:textColor="@color/brown" />
+
+                        <TextView
+                            android:id="@+id/location_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/location_title"
+                            android:gravity="right"
+                            android:maxLines="2"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"
+                            android:text="28th ST Bergenline Ave,\n1002" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/request_layout"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorGray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/price_title"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="PRICE"
+                            android:textColor="@color/brown" />
+
+                        <TextView
+                            android:id="@+id/price_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/black"
+                            android:layout_centerVertical="true"
+                            android:text="$0" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/car_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/divider_car"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/colorGray" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="JOB DETAILS"
+                            android:textColor="@color/brown"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/car_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/divider_car"
+                            android:layout_marginTop="8dp"
+                            >
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <!-- <TextView
+                                     android:id="@+id/model"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:text="FOED FISTA 2009"
+                                     />
+ -->
+
+                                <!--<TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="8dp"
+                                    android:visibility="gone"
+                                    android:background="@color/colorGray" />-->
+
+                                <!--
+                                                                <LinearLayout
+                                                                    android:layout_marginTop="8dp"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:orientation="horizontal">
+
+                                                                    <TextView
+                                                                        android:layout_weight="1"
+                                                                        android:id="@+id/plate_val"
+                                                                        android:layout_width="wrap_content"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:background="@color/black"
+                                                                        android:padding="8dp"
+                                                                        android:text="6GDGG86"
+                                                                        android:gravity="center"
+                                                                        android:textColor="@color/white" />
+
+                                                                    <TextView
+                                                                        android:layout_weight="1"
+                                                                        android:id="@+id/state_val"
+                                                                        android:layout_width="wrap_content"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_marginLeft="8dp"
+                                                                        android:background="@color/black"
+                                                                        android:padding="8dp"
+                                                                        android:text="STATE"
+                                                                        android:gravity="center"
+                                                                        android:textColor="@color/white" />
+
+                                                                    <TextView
+                                                                        android:layout_weight="1"
+                                                                        android:id="@+id/color_val"
+                                                                        android:layout_width="wrap_content"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_marginLeft="8dp"
+                                                                        android:background="@color/red"
+                                                                        android:padding="8dp"
+                                                                        android:text="C"
+                                                                        android:gravity="center"
+                                                                        android:textColor="@color/white" />
+                                                                </LinearLayout>
+                                -->
+
+
+                                <!--  <TextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="1dp"
+                                      android:layout_marginTop="16dp"
+                                      android:background="@color/colorGray" />-->
+
+
+                                <RelativeLayout
+                                    android:id="@+id/car_upload_image_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/fixed_price_devider"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:id="@+id/pic_title"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="JOB PICTURE"
+                                        android:textColor="@color/brown" />
+
+                                    <com.app.shovelerapp.utils.ScaledImageView
+                                        android:id="@+id/car_iv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="150dp"
+                                        android:layout_below="@+id/pic_title"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="8dp"
+                                        android:adjustViewBounds="true" />
+
+                                    <TextView
+                                        android:layout_below="@+id/car_iv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.0dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginBottom="4dp"
+                                        android:background="@color/colorGray" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp">
+
+                                        <TextView
+                                            android:id="@+id/model_title"
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:text="MODEL"
+                                            android:layout_centerVertical="true"
+                                            android:textColor="@color/brown" />
+
+                                        <TextView
+                                            android:id="@+id/model"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:textColor="@color/black"
+                                            android:layout_marginLeft="8dp"
+                                            android:gravity="right"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toRightOf="@+id/model_title"
+                                            android:text="FOED FISTA 2009" />
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="8dp"
+                                        android:background="@color/colorGray" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp">
+
+                                        <TextView
+                                            android:id="@+id/color_title"
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:text="CAR COLOR"
+                                            android:textColor="@color/brown" />
+
+                                        <ImageView
+                                            android:id="@+id/color_val"
+                                            android:layout_width="50dp"
+                                            android:layout_height="30dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginLeft="8dp"
+                                            android:background="@color/red"
+                                            android:padding="8dp"
+                                            android:src="@drawable/car"
+                                            android:text="C"
+                                            android:textColor="@color/white" />
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="8dp"
+                                        android:background="@color/colorGray" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp">
+
+                                        <TextView
+                                            android:id="@+id/plate_state"
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:text="LICENSE PLATE\nNUMBER &amp; STATE"
+                                            android:textColor="@color/brown" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_toRightOf="@id/plate_state"
+                                            android:gravity="right"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/plate_val"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@color/app_color"
+                                                android:padding="8dp"
+                                                android:singleLine="true"
+                                                android:text="6GDGG86"
+                                                android:textColor="@color/white" />
+
+                                            <TextView
+                                                android:id="@+id/state_val"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="8dp"
+                                                android:background="@color/app_color"
+                                                android:padding="8dp"
+                                                android:singleLine="true"
+                                                android:text="STATE"
+                                                android:textColor="@color/white" />
+
+                                        </LinearLayout>
+
+                                        <!--<TextView
+                                            android:id="@+id/color_val"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginLeft="8dp"
+                                            android:background="@color/red"
+                                            android:padding="8dp"
+                                            android:textColor="@color/white"
+                                            android:text="C" />-->
+                                    </RelativeLayout>
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="16dp"
+                                        android:background="@color/colorGray" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/car_layout"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:paddingTop="16dp">
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/divider_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/home"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorGray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="JOB DETAILS"
+                            android:textColor="@color/brown"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/home_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/divider_1"
+                            android:layout_marginTop="4dp"
+                            android:visibility="visible">
+
+
+                            <RelativeLayout
+                                android:id="@+id/home_upload_image_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp">
+
+                                <TextView
+                                    android:id="@+id/pic1_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="JOB PICTURE"
+                                    android:textColor="@color/brown" />
+
+                                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:id="@+id/home_iv_panorama"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_below="@+id/pic1_title"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    class="com.google.android.gms.maps.SupportStreetViewPanoramaFragment" />
+                                <TextView
+                                    android:id="@+id/mask_1"
+                                    android:layout_below="@+id/pic_title1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#ffffff" />
+
+
+                                <com.app.shovelerapp.utils.ScaledImageView
+                                    android:id="@+id/home_iv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_below="@+id/pic1_title"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:layout_below="@+id/home_iv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.0dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@color/colorGray" />
+                            </RelativeLayout>
+
+                            <!--  <TextView
+                                  android:id="@+id/divider_9"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="1dp"
+                                  android:layout_below="@+id/upload_image_layout"
+                                  android:layout_marginTop="16dp"
+                                  android:layout_marginBottom="8dp"
+                                  android:background="@color/black" />-->
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/business_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_layout"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/request_layout"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorGray" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:id="@+id/size_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="SIZE"
+                                android:textColor="@color/brown" />
+
+                            <TextView
+                                android:id="@+id/size_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/black"
+                                android:text="70 ft²" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/size_of_work_divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/size_of_work"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorGray" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/business_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/divider_3"
+                            android:visibility="visible">
+
+
+                            <RelativeLayout
+                                android:id="@+id/business_upload_image_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp">
+
+                                <TextView
+                                    android:id="@+id/pic2_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="JOB PICTURE"
+                                    android:textColor="@color/brown" />
+
+                                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:id="@+id/business_iv_panorama"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_below="@+id/pic2_title"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    class="com.google.android.gms.maps.SupportStreetViewPanoramaFragment" />
+                                <TextView
+                                    android:id="@+id/mask_2"
+                                    android:layout_below="@+id/pic_title2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#ffffff" />
+
+                                <com.app.shovelerapp.utils.ScaledImageView
+                                    android:id="@+id/business_iv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_below="@+id/pic2_title"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="centerCrop" />
+                                <TextView
+                                    android:layout_below="@+id/business_iv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.0dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@color/colorGray" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/special_imstruction_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_4"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/spe_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="SPECIAL INSTRUCTIONS"
+                            android:textColor="@color/brown" />
+
+                        <TextView
+                            android:id="@+id/special_instruction_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/spe_title"
+                            android:layout_marginTop="4dp"
+                            android:paddingLeft="8dp"
+                            android:textColor="@color/black"
+                            android:text="No instructions entered" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/exptimeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/special_imstruction_layout"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:id="@+id/txtLabelExptime"
+                            android:text="Expected Time of Arrival of Shoveler"
+                            android:textColor="@color/brown" />
+
+                        <TextView
+                            android:id="@+id/txtExpTimeArrive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtLabelExptime"
+                            android:layout_marginTop="4dp"
+                            android:paddingLeft="8dp"
+                            android:textColor="@color/black"
+                            android:text="" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/post_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/divider_5"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/app_color"
+            android:drawableRight="@drawable/ic_action_continue"
+            android:text="POST JOB"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutChatShovlerRequester"
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="260dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/drawable_chat_shovler"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView6"
+            android:src="@drawable/chatbubble" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="CONTACT SHOVELER"
+            android:id="@+id/textView6"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+    </RelativeLayout>
+</RelativeLayout>

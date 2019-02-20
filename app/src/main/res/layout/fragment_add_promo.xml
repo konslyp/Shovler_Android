@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:clickable="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/title_toolbar_layout"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <EditText
+            android:id="@+id/promo_code_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/layout_border"
+            android:paddingLeft="8dp"
+            />
+        <Button
+            android:id="@+id/add_promo_code"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_color"
+            android:text="ADD PROMO CODE"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

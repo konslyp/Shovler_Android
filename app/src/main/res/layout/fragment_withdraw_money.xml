@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/title_toolbar_layout"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/withdraw_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You're about to withdraw $10" />
+
+        <TextView
+            android:id="@+id/destination_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Please select the destination platform of your choice" />
+
+        <Button
+            android:id="@+id/send_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Request"
+            android:textColor="@color/white"
+            android:background="@color/app_color"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+</LinearLayout>

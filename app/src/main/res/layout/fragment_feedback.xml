@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/title_toolbar_layout"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/feedback_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We appreciate your feedback. Your feedback is important to us and it gives us the opportunity to make the app better.\n\nFor customer service, please email admin@shovler.com.\n\nPlease fill in your comments below." />
+
+            <EditText
+                android:id="@+id/feedback_et"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:gravity="left|top"
+                android:imeOptions="actionDone"
+                android:background="@drawable/layout_border" />
+
+            <Button
+                android:id="@+id/send_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/app_color"
+                android:text="SEND FEEDBACK"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/thanks_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@color/white_trans"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/right_outer_circle"
+                    />
+                <TextView
+                    android:layout_below="@+id/right"
+                    android:id="@+id/thanks"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Thanks!"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:layout_below="@+id/thanks"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginTop="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thank you for submitting your feedback!"
+                    android:textColor="@android:color/black"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

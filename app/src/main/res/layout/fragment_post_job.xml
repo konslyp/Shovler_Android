@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:background="@drawable/grad_bg">
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/title_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_below="@+id/top_layout"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/right_outer_circle"/>
+        <TextView
+            android:id="@+id/posted_job"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="YOU HAVE POSTED A JOB"
+            android:textColor="@color/brown"
+            android:paddingLeft="36dp"
+            android:paddingRight="36dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/post_job_desc"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="The job has been sent to the nearest shovelers, we will notify you once it has been accepted. You can also check the job status."
+            android:paddingLeft="36dp"
+            android:paddingRight="36dp"
+            android:textSize="15dp" />
+        <Button
+            android:id="@+id/go_job_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Status"
+            android:drawableRight="@drawable/ic_action_status"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:drawablePadding="16dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:background="@color/app_color"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/undo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR POST ANOTHER JOB"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="@color/app_color"/>
+
+    </LinearLayout>
+</RelativeLayout>
